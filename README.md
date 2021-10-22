@@ -58,7 +58,7 @@ Each of the components below must be completed and must make use of props. A "ha
 
 #### DonationForm
 
-For the donation form, you will need to update the sentence "You could be donation #1!" so that instead of being hardcoded to the number `1`, it is set to a number one above the number of donations.
+For the donation form, you will need to update the sentence "You could be donation #1!" so that instead of being hardcoded to the number `1`, it is set to a number one higher than the current number of donations. For example, if there are 3 donations, it would say, "You could be donation #4!"
 
 ```html
 <section class="donation">
@@ -89,7 +89,7 @@ For the donation form, you will need to update the sentence "You could be donati
 
 ### Progress
 
-For the progress section, you will need to replace the value `$0` with a dynamic value based on the donations.
+For the progress section, you will need to replace the value `$0` with a dynamic value based on the donations and the `$1000` with a dynamic value based on the target amount to raise.
 
 ```html
 <section class="progress">

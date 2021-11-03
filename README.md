@@ -102,7 +102,8 @@ For the progress section, you will need to replace the value `$0` with a dynamic
 
 ### Recent Donations
 
-For the recent donations section, you will need to have a number of `li` elements equal to the number of donations. Each `li` should include the person who donated, the amount, and their caption.
+For the recent donations section, you will need to have a number of `li` elements equal to the number of donations. 
+Each `li` should include the person who donated, the amount, and their caption.
 
 ```html
 <section>

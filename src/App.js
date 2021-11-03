@@ -38,8 +38,6 @@ const donations = [
     name: "Sam",
   },
 ];
-let progress = 0;
-donations.forEach((dono) => (progress += dono.amount));
 export default class App extends React.Component {
   render() {
     return (
@@ -50,7 +48,7 @@ export default class App extends React.Component {
             <RecentDonations donations={donations} />
           </section>
           <section className="">
-            <Progress target={targetAmount} donationsSum={progress} />
+            <Progress target={targetAmount} donations={donations} />
             <DonationForm position={donations.length + 1} />
           </section>
         </main>

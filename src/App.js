@@ -2,6 +2,8 @@ import React from "react";
 import TopBar from "./Components/TopBar";
 import "./App.css";
 import Progress from "./Components/Progress";
+import RecentDonations from "./Components/RecentDonations";
+import DonationForm from "./Components/DonationForm";
 
 const targetAmount = 1000;
 const donations = [
@@ -36,6 +38,11 @@ const donations = [
     name: "Sam",
   },
 ];
+let raisedAmount = 0;
+donations.map((donation) => {
+  raisedAmount += donation.amount
+  return raisedAmount
+})
 
 export default class App extends React.Component {
   render() {
@@ -43,11 +50,18 @@ export default class App extends React.Component {
       <>
         <TopBar />
         <main className="container">
-          <section className="sidebar">{/* Recent Donations */}</section>
+          <section className="sidebar">
+            {/* RecentDonations */}
+            <RecentDonations donations={donations} />
+            </section>
+          
           <section className="">
-          {/* I want props to have a key on it called max, and a value of whatever this is. */}
-            <Progress max={targetAmount}/>
+            {/* I want props to have a key on it called max, and a value of whatever this is. */}
+            {/* Progress */}
+            <Progress max={targetAmount} min={raisedAmount} />
+            
             {/* Donation Form */}
+            <DonationForm position={donations.length + 1}/>
           </section>
         </main>
       </>

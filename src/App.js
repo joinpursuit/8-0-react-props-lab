@@ -1,6 +1,7 @@
 import React from "react";
 import TopBar from "./Components/TopBar";
 import "./App.css";
+import Progress from "./Components/Progress";
 
 const targetAmount = 1000;
 const donations = [
@@ -44,7 +45,8 @@ export default class App extends React.Component {
         <main className="container">
           <section className="sidebar">{/* Recent Donations */}</section>
           <section className="">
-            {/* Progress */}
+          {/* I want props to have a key on it called max, and a value of whatever this is. */}
+            <Progress max={targetAmount}/>
             {/* Donation Form */}
           </section>
         </main>

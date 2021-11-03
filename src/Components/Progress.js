@@ -7,15 +7,24 @@ class Progress extends Component{
   }
 
   render(){
-    // let allDonations = donations.map((donation)=>{
-    //     return (donation.amount)
-    // })
+    const {donations} = this.props
 
-    // const [donations] = this.props.donations
-    // console.log(donations)
+    let donationAmounts = donations.map((donation) => {
+      return donation.amount
+    })
+    let progress = donationAmounts.reduce((previousValue, currentValue)=>{
+     return previousValue+currentValue
+    },0)
 
     return(
-      null
+      <section className="progress">
+        <h2>
+          Raised <span className="secondary">${progress}</span> of <span className="secondary">$1000</span>
+        </h2>
+      </section>
+      
+     
+
     )
   }
 }

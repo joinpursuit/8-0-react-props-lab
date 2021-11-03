@@ -1,22 +1,28 @@
 import { Component } from "react";
 
-const { amount, caption, id, name} = this.props.donation
-const RecentDonations = () => {
+class RecentDonations extends Component{
+  render(){
+    const {donations} = this.props
 
-  return (
+    let displayDonations = donations.map((donation)=>{
+      return(
+        
+        <li key={donation.id}><span>{donation.name} donated {donation.amount}</span>{donation.caption}</li>
+        )
+      })
+      
+    
+      
+      return (
+        <section>
+        <h2>Recent Donations</h2>
+          <ul>
+            {displayDonations}
+          </ul>
+      </section>
+    )
 
-
-    <div>
-      <section>
-  <h2>Recent Donations</h2>
-  <ul>
-    <li><span>{name} donated {amount}</span>You really need this. Really.</li>
-    <li><span>Rami donated $10</span>Here, take a break from work!</li>
-  </ul>
-</section>
-
-    </div>
-  )
+  }
 };
 
 export default RecentDonations;

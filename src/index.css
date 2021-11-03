@@ -97,7 +97,7 @@ header p {
 }
 
 .donation input[type='submit'],
-.donation button {
+.donation-form-button {
   background: var(--primary);
   font-weight: bold;
   padding: 10px;

@@ -64,13 +64,13 @@ For the donation form, you will need to update the sentence "You could be donati
 <section class="donation">
   <h3>You could be donation <span class="secondary">#1!</span></h3>
   <form>
-    <label
-      >Name<input
+    <label>Name</label>
+      <input
         id="name"
         name="name"
         type="text"
-        placeholder="Your name..." /></label
-    ><label
+        placeholder="Your name..." />
+        <label
       >Caption<input
         id="caption"
         name="caption"

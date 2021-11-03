@@ -1,5 +1,5 @@
 const RecentDonations = () => {
-  return null;
-};
+  return null
+  };
 
-export default RecentDonations;
+  export default RecentDonations;

@@ -1,6 +1,12 @@
 const RecentDonations = (props) => {
+  const result = props.donations.map((element) => <li><span>{element.name} donated ${element.amount}</span>{element.caption}</li>)
   return (
-    <li><span>{props.name} donated ${props.amount}</span>{props.caption}</li>
+    <section>
+    <h2>Recent Donations</h2>
+    <ul>
+      {result}
+    </ul>
+</section>
   );
 };
 

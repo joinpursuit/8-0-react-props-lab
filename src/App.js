@@ -3,6 +3,7 @@ import TopBar from "./Components/TopBar";
 import "./App.css";
 import Progress from './Components/Progress'
 import DonationForm from './Components/DonationForm'
+import RecentDonations from './Components/RecentDonations'
 
 const targetAmount = 1000;
 const donations = [
@@ -52,7 +53,8 @@ count +=1
       <>
         <TopBar />
         <main className="container">
-          <section className="sidebar">     
+          <section className="sidebar"> 
+          <RecentDonations  donations={donations}/>    
             </section>
           <section className="">
           <Progress  max={targetAmount} amount={total}/>

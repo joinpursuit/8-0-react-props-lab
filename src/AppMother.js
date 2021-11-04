@@ -1,0 +1,5 @@
+
+const shoes = {
+
+    "Nike", "Adidas"
+}

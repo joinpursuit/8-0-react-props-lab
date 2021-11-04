@@ -22,9 +22,11 @@ class Progress extends Component {
     super()
   }
   render() {
+    const { donationsArr, targetAmount } = this.props
+    
     let donationAmount = 0;
 
-    this.props.donationsArr.forEach(donation => {
+    donationsArr.forEach(donation => {
       donationAmount += donation.amount;
     });
 
@@ -32,7 +34,7 @@ class Progress extends Component {
       <section class="progress">
         <h2>
           Raised <span class="secondary">${donationAmount}</span> of
-          <span class="secondary"> ${this.props.targetAmount}</span>
+          <span class="secondary"> ${targetAmount}</span>
         </h2>
       </section>
     )

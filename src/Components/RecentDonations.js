@@ -22,7 +22,9 @@ class RecentDonations extends Component {
     super()
   }
   render() {
-    const recentDonationsList = this.props.donationsArr.map(donation => {
+    const { donationsArr } = this.props
+
+    const recentDonationsList = donationsArr.map(donation => {
       return (
         <li><span>{donation.name} donated ${donation.amount}</span>{donation.caption}</li>
       )

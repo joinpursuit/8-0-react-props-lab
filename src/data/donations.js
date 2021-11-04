@@ -1,4 +1,3 @@
-const targetAmount = 1000;
 const donations = [
   {
     amount: 250,
@@ -31,3 +30,5 @@ const donations = [
     name: "Sam",
   },
 ];
+
+export default donations;

@@ -7,8 +7,7 @@ class RecentDonations extends Component{
   }
 
   render(){
-    let { title } = this.props;
-    let allDonations = donations.map((donation, i)=>{
+    let allDonations = donations.map((donation)=>{
       return (
       <li><span>{donation.name} donated ${donation.amount}</span>{donation.caption}</li>
       )
@@ -16,7 +15,7 @@ class RecentDonations extends Component{
 
     return (
       <section>
-        <h2>{ title }</h2>
+        <h2>Recent Donations</h2>
         <ul>
           { allDonations }
         </ul>

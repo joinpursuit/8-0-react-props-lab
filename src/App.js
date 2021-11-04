@@ -47,7 +47,7 @@ export default class App extends React.Component {
         <main className="container">
           <section className="sidebar"><RecentDonations donationsArr={donations}/></section>
           <section className="">
-            <Progress donationsArr={donations}/>
+            <Progress donationsArr={donations} targetAmount={targetAmount}/>
             <DonationForm donationsArr={donations} />
           </section>
         </main>

@@ -32,7 +32,7 @@ class Progress extends Component {
       <section class="progress">
         <h2>
           Raised <span class="secondary">${donationAmount}</span> of
-          <span class="secondary"> $1000</span>
+          <span class="secondary"> ${this.props.targetAmount}</span>
         </h2>
       </section>
     )

@@ -1,8 +1,8 @@
-const Progress = (props) => {
+const Progress = ({max, amount}) => {
   return (<section class="progress">
   <h2>
-    Raised <span class="secondary">${props.amount}</span> of
-    <span class="secondary"> ${props.max}</span>
+    Raised <span class="secondary">${amount}</span> of
+    <span class="secondary"> ${max}</span>
   </h2>
 </section>
   )

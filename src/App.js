@@ -49,7 +49,7 @@ export default class App extends React.Component {
             <RecentDonations donations={donations} />
           </section>
           <section className="">
-            <Progress max={targetAmount} />
+            <Progress donations={donations} max={targetAmount} />
             <DonationForm number={donations.length + 1} />
           </section>
         </main>

@@ -10,7 +10,6 @@ const Progress = (props) => {
       <h3>
         Raised ${raisedAmt} of ${targetAmount}
       </h3>
-      <h4>You could be donation #{donations.length + 1}!</h4>
     </div>
   );
 };

@@ -7,14 +7,16 @@ const RecentDonations = (props) => {
         </span>
         {item.caption}
       </li>
+
     );
   });
 
   return (
     <section>
-      <h2>Recent Donations</h2>
-      <ul>{listDonations}</ul>
+      <h2> Recent Donations </h2>
+      <ul> {listDonations} </ul>
     </section>
+    
   );
 };
 

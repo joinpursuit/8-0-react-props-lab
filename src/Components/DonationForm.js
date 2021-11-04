@@ -9,7 +9,7 @@ class DonationForm extends Component {
   render(){
     return (
       <section class="donation">
-        <h3>You could be donation <span class="secondary">#1!</span></h3>
+        <h3>You could be donation <span class="secondary">#{ donations.length +1 }!</span></h3>
         <form>
           <label>
             Name<input

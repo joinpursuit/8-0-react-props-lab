@@ -1,19 +1,20 @@
-import { Component } from "react";
-import Donation from "./Donation";
-
-class RecentDonations extends Component {
-  render() {
+const RecentDonations = (props) => {
+  let list =  props.donations.map((item) => {
     return (
-      <section>
-        <h2>Recent Donations</h2>
-        <ul>
-          {this.props.donations.map(({ name, amount, caption }) => (
-            <Donation name={name} amount={amount} caption={caption} />
-          ))}
-        </ul>
-      </section>
-    );
-  }
-}
+    <li> 
+      <span> 
+        {item.name} donated {item.amount} 
+      </span> 
+{item.caption}
+    </li>
+    ); 
+  });
+  return (
+    <section>
+  <h2>Recent Donations</h2>
+  <ul>{list}</ul>
+</section>
+  );
+};
 
 export default RecentDonations;

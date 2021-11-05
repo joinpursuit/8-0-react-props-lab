@@ -1,8 +1,8 @@
 import React from "react";
-import TopBar from "./components/TopBar";
-import Progress from "./components/Progress";
-import DonationForm from "./components/DonationForm";
-import RecentDonations from "./components/RecentDonations";
+import TopBar from "./Components/TopBar";
+import Progress from "./Components/Progress";
+import DonationForm from "./Components/DonationForm";
+import RecentDonations from "./Components/RecentDonations";
 import "./App.css";
 
 const targetAmount = 1000;

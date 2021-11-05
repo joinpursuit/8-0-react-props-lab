@@ -7,7 +7,6 @@ class DonationForm extends Component {
 
   render(){
     const {donations} = this.props;
-
     let allDonations = donations.length; 
 
     return (

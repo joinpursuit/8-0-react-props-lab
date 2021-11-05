@@ -41,9 +41,9 @@ const donations = [
 
 
 export default class App extends React.Component {
-  constructor(){
-    super();
-  }
+  // constructor(){
+  //   super();
+  // }
 
   render() {
     return (

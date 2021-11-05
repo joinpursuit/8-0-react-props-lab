@@ -1,9 +1,9 @@
 import { Component } from "react";
 
 class DonationForm extends Component {
-  constructor(){
-    super();
-  }
+  // constructor(){
+  //   super();
+  // }
 
   render(){
     const {donations} = this.props;

@@ -44,7 +44,7 @@ export default class App extends React.Component {
         <main className="container">
           <section className="sidebar">{/* Recent Donations */}</section>
           <section className="">
-            {/* Progress */}
+            {Progress max={targetAmount}/>
             {/* Donation Form */}
           </section>
         </main>

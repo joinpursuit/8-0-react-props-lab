@@ -1,5 +1,4 @@
 import { Component } from "react";
-import donations from "../data/donations";
 
 class RecentDonations extends Component{
   constructor(){
@@ -7,6 +6,8 @@ class RecentDonations extends Component{
   }
 
   render(){
+    const {donations} = this.props;
+
     let allDonations = donations.map((donation)=>{
       return (
       <li><span>{donation.name} donated ${donation.amount}</span>{donation.caption}</li>

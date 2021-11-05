@@ -1,5 +1,4 @@
 import { Component } from "react";
-import donations from "../data/donations";
 
 class DonationForm extends Component {
   constructor(){
@@ -7,6 +6,8 @@ class DonationForm extends Component {
   }
 
   render(){
+    const {donations} = this.props;
+
     return (
       <section class="donation">
         <h3>You could be donation <span class="secondary">#{ donations.length +1 }!</span></h3>

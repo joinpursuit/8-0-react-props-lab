@@ -1,6 +1,4 @@
 import { Component } from "react";
-import donations from "../data/donations";
-import targetAmount from "../data/targetAmount";
 
 class Progress extends Component{
   constructor(){
@@ -8,17 +6,20 @@ class Progress extends Component{
   }
 
   render(){
-    let total = 0;
-    donations.map((donation)=>{
-      return ( total += donation.amount )
-    })
+    const { donations } = this.props;
+    const reducer = (previousValue, currentValue) => previousValue + currentValue;
 
+    let allDonations = donations.map((donation)=>{
+      return ( donation.amount )
+    })
+    
+    let total = allDonations.reduce(reducer, 0)
 
     return(
       <section class="progress">
         <h2>
           Raised <span class="secondary">${ total }</span> of
-          <span class="secondary"> ${ targetAmount }</span>
+          <span class="secondary"> ${ this.props.targetAmount }</span>
         </h2>
       </section>
     )

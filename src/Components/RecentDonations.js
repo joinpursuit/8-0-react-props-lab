@@ -1,5 +1,3 @@
-import React from "react";
-
 const RecentDonations = (props) => {
   const UserDonations = props.donations.map((donor) => {
     return (
@@ -9,13 +7,15 @@ const RecentDonations = (props) => {
         </span>
         {donor.caption}
       </li>
-    )
+
+    );
   })
+
   return (
     <section>
-      <h2> Recent Donations </h2>
-      <ul> {UserDonations} </ul>
-    </section>
+        <h2> Recent Donations </h2>
+        <ul> {UserDonations} </ul>
+      </section>
   );
 };
 

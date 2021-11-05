@@ -4,7 +4,7 @@ const Progress = (props) => {
     <section class="progress">
       <h2>
         Raised <span class="secondary">{"$" + props.raised}</span> of
-        <span class="secondary">${props.max}</span>
+        <span class="secondary"> ${props.max}</span>
       </h2>
     </section>
   );

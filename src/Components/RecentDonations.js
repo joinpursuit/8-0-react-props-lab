@@ -1,4 +1,4 @@
-const RecentDonations = () => {
+const RecentDonations = (props  ) => {
   console.log(props, props.donations);
   let recent = props.donations.map(({ name, amount, caption }) => {
     return (

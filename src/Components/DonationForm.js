@@ -1,4 +1,4 @@
-const DonationForm = () => {
+const DonationForm = (props) => {
   return (
     <section class="donation">
       <h3>

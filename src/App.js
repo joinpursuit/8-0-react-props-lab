@@ -39,6 +39,8 @@ const donations = [
   },
 ];
 
+
+
 export default class App extends React.Component {
   render() { 
     let eachDonationListed = donations.map((eachDonation) => {
@@ -47,6 +49,9 @@ export default class App extends React.Component {
       amount={eachDonation.amount}
       caption={eachDonation.caption} />
     })
+
+  
+
     return (
       <>
         <TopBar />

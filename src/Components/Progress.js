@@ -1,23 +1,9 @@
 
-//import donations from "../App";
+const Progress = (props) =>  {
+  let donations = props.donation
+  let total = 0
+  donations.map((contribution) => total += contribution.amount);
 
-// let total = function total (donations) {
-//   let acc = 0;
-//   for (const donations of donation) {
-//     if (donations.amount){
-//       acc += donation.amount;
-//     }
-//   }
-//   return acc;
-
-// }
-
-const Progress = (props, target) =>  {
-
-  let initialValue = 0
-  const total = props.donations.reduce(function (accumulator, currentValue) {
-    return accumulator += currentValue.amount
-  }, initialValue)
   
   return (
     <section class="progress">

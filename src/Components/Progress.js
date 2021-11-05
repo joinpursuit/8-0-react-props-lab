@@ -1,5 +1,6 @@
 import { Component } from "react";
 import donations from "../data/donations";
+import targetAmount from "../data/targetAmount";
 
 class Progress extends Component{
   constructor(){
@@ -17,7 +18,7 @@ class Progress extends Component{
       <section class="progress">
         <h2>
           Raised <span class="secondary">${ total }</span> of
-          <span class="secondary"> $1000</span>
+          <span class="secondary"> ${ targetAmount }</span>
         </h2>
       </section>
     )

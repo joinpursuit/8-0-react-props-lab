@@ -6,7 +6,6 @@ import RecentDonations from "./components/RecentDonations";
 import donations from "./data/donations";
 import "./App.css";
 
-const targetAmount = 1000;
 
 export default class App extends React.Component {
   constructor(){

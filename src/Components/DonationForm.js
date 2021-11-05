@@ -8,9 +8,11 @@ class DonationForm extends Component {
   render(){
     const {donations} = this.props;
 
+    let allDonations = donations.length; 
+
     return (
-      <section class="donation">
-        <h3>You could be donation <span class="secondary">#{ donations.length +1 }!</span></h3>
+      <section className="donation">
+        <h3>You could be donation <span className="secondary">#{ allDonations +1 }!</span></h3>
         <form>
           <label>
             Name<input

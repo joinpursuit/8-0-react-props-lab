@@ -10,7 +10,7 @@ class RecentDonations extends Component{
 
     let allDonations = donations.map((donation)=>{
       return (
-      <li><span>{donation.name} donated ${donation.amount}</span>{donation.caption}</li>
+      <li key={donation.id}><span>{donation.name} donated ${donation.amount}</span>{donation.caption}</li>
       )
     })
 

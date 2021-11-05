@@ -16,10 +16,10 @@ class Progress extends Component{
     let total = allDonations.reduce(reducer, 0)
 
     return(
-      <section class="progress">
+      <section className="progress">
         <h2>
-          Raised <span class="secondary">${ total }</span> of
-          <span class="secondary"> ${ this.props.targetAmount }</span>
+          Raised <span className="secondary">${ total }</span> of
+          <span className="secondary"> ${ this.props.targetAmount }</span>
         </h2>
       </section>
     )

@@ -1,9 +1,9 @@
-import { Component } from "react";
+import React from "react";
 
-class TopBar extends Component{
-  constructor(){
-    super();
-  }
+class TopBar extends React.Component{
+  // constructor(){
+  //   super();
+  // }
 
   render(){
     return (

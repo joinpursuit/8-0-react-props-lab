@@ -1,6 +1,6 @@
-import { Component } from "react";
+import React from "react";
 
-class DonationForm extends Component {
+class DonationForm extends React.Component {
   // constructor(){
   //   super();
   // }

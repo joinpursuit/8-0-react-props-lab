@@ -49,7 +49,7 @@ header p {
 .container {
   display: grid;
   gap: 25px;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 2fr;
   margin: 25px auto;
   width: 60%;
 }

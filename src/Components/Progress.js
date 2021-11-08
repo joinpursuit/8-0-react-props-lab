@@ -5,7 +5,7 @@ const Progress = (props) => {
   return (
     <section>
       <h2>
-        Raised ${addUpDona} of ${targetAmount}
+        Raised <span className="totalNum">${addUpDona}</span> of <span className="totalNum">${targetAmount}</span>
       </h2>
     </section>
   );

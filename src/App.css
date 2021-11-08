@@ -1,1 +1,19 @@
 /* Your code here! */
+
+.totalNum {
+    color: blueviolet;
+}
+
+.input {
+    display: grid;
+    margin: 8px;
+    height: 25px;
+    width: 170px;
+}
+
+button {
+    margin: 8px;
+    font-size: large;
+    background-color: green;
+
+}

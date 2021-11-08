@@ -5,12 +5,12 @@ class DonationForm extends Component {
     super();
   }
   render() {
-    let { donationLength } = this.props;
+    const { donationLength } = this.props;
     return (
       <section className="donation">
         <h3>
           You could be donation{" "}
-          <span className="secondary">#{ donationLength + 1 }</span>
+          <span className="secondary">#{ donationLength + 1 }!</span>
         </h3>
         <form>
           <label>

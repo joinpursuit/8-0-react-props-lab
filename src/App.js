@@ -39,6 +39,11 @@ const donations = [
   },
 ];
 
+const raised = donations.reduce((returnValue, donation) => {
+  returnValue += donation.amount;
+  return returnValue;
+}, 0);
+
 export default class App extends React.Component {
   render() {
     return (

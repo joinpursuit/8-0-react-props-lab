@@ -10,7 +10,6 @@ class Progress extends Component{
 
 
     let dynamicDonations = donations.map((donation)=>donation.amount).reduce((previousVal, nextVal)=> previousVal+ nextVal)
-    console.log(dynamicDonations)
 
     return (
       <section className='progress'>

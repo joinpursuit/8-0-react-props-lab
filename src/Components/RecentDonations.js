@@ -10,8 +10,9 @@ class RecentDonations extends Component{
 
   render(){
     const { donations } = this.props;
+    console.log(donations)
 
-    allRecentDonations = donations.map((donation, i)=> {
+    let allRecentDonations = donations.map((donation, i)=> {
       return(
         <section>
           <h2>Recent Donations</h2>
@@ -22,7 +23,7 @@ class RecentDonations extends Component{
       )
     })
 
-    return ({allRecentDonations});
+    return (allRecentDonations);
   }
 }
 

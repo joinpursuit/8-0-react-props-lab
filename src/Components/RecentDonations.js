@@ -15,7 +15,7 @@ class RecentDonations extends Component{
     let allRecentDonations = donations.map((donation, i)=> {
       return(
         <section>
-          <h2>Recent Donations</h2>
+          <h2></h2>
           <ul>
             <li> <span> {donation.name} donated ${donation.amount}</span> {donation.caption}</li>
           </ul>
@@ -23,7 +23,15 @@ class RecentDonations extends Component{
       )
     })
 
-    return (allRecentDonations);
+    return (
+      <section>
+        <h2> Recent Donations </h2>
+        <ul>
+          {allRecentDonations}
+        </ul>
+      </section>
+      )
+      ;
   }
 }
 

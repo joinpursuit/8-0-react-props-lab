@@ -6,7 +6,7 @@ constructor(props){
 }
 
    render (){
-     let donationsToDisplay = this.props.donations.map((donation ,i)=> <li key={i}> {donation.name}donated ${donation.amount} {donation.caption} </li>)
+     let donationsToDisplay = this.props.donations.map((donation ,i)=> <li key={i}> {donation.name}  donated ${donation.amount} {donation.caption}</li>)
   return (
     <section>
     <h2>Recent Donations</h2>

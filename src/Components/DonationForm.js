@@ -6,7 +6,7 @@ class DonationForm extends Component {
   }
   render(){
   return <section class="donation">
-  <h3>You could be donation  <span class="secondary">{this.props.id}</span></h3>
+  <h3>You could be donation  <span class="secondary">#{this.props.id}!</span></h3>
   <form>
     <label
       >Name<input

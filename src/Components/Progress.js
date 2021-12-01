@@ -8,7 +8,9 @@ class Progress extends Component{
   render(){
     const {donations, targetAmount} = this.props
 
-    let dynamicDonations = donations.map((donation)=>donation.amount).reduce((previousValue, currentValue)=> previousValue + currentValue)
+
+    let dynamicDonations = donations.map((donation)=>donation.amount).reduce((previousVal, nextVal)=> previousVal+ nextVal)
+    console.log(dynamicDonations)
 
     return (
       <section className='progress'>

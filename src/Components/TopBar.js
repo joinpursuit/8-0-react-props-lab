@@ -1,4 +1,10 @@
-const TopBar = () => {
+import { Component } from "react";
+
+class TopBar extends Component {
+  constructor(props){
+    super(props)
+  }
+  render(){
   return (
     <header>
       <h1>
@@ -7,6 +13,7 @@ const TopBar = () => {
       <p>Help me go on a vacation to a beach somewhere!</p>
     </header>
   );
+}
 };
 
 export default TopBar;

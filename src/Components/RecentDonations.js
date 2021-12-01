@@ -8,7 +8,6 @@ class RecentDonations extends Component{
     super(props);
   }
 
-
   render(){
     const { donations } = this.props;
 

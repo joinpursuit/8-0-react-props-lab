@@ -39,11 +39,6 @@ const donations = [
   },
 ];
 
-// However, you're not rendering these li's the React 'way'. 
-// In App, you're handling the .map() of all the donations and returning new RecentDonation elements. 
-// Alternatively, what you should be doing is passing the donations array down to this RecentDonations component and performing the .map() calculation here. 
-// That .map() should then be returning li elements to be placed inside the ul. Please let me know if you need clarification or help with this!
-
 export default class App extends React.Component {
   render() {
     return (

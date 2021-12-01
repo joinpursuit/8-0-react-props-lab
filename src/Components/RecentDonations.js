@@ -31,7 +31,6 @@ class RecentDonations extends Component{
         </ul>
       </section>
       )
-      ;
   }
 }
 

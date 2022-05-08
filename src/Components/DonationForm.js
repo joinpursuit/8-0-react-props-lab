@@ -7,7 +7,7 @@ export default function DonationForm(props) {
   const { donationCount } = props;
   return (
     <>
-    <section class="donation">
+    <section className="donation">
       <h3>
         You could be donation <span class="secondary"> #{donationCount}</span>
       </h3>

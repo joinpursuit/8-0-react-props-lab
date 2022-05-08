@@ -67,7 +67,7 @@ export default class App extends React.Component {
             </ul>
           </section>
           <section className="">
-            <section class="progress">
+            <section className="progress">
               <h2>
                 <Progress 
                   total = {totalAmount}

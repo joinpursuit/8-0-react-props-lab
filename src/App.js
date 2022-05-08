@@ -65,7 +65,7 @@ export default class App extends React.Component {
               })}
             </ul>
           </section>
-          <section className="">
+          <section className="progress">
             <Progress total={totalRaised} goal={targetAmount}/>
             <DonationForm number={donations.length + 1}/>
           </section>

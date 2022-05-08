@@ -1,8 +1,15 @@
 import React from "react";
 import TopBar from "./Components/TopBar";
 import "./App.css";
+// import DonationForm to App.js
+import DonationForm from "./Components/DonationForm";
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+
 
 const targetAmount = 1000;
+
+// create prop with const
 const donations = [
   {
     amount: 250,
@@ -46,6 +53,11 @@ export default class App extends React.Component {
           <section className="">
             {/* Progress */}
             {/* Donation Form */}
+            {/*  */}
+            {/* interpolate props value inside return child file  */}
+             <Progress donationAmount = {amount}></Progress>
+             <DonationForm donationNumber={donations.length +1}/>
+             <RecentDonations></RecentDonations>
           </section>
         </main>
       </>

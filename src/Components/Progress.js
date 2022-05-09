@@ -1,14 +1,17 @@
-const Progress = ({ targetAmount, donations }) => {
+const Progress = (props) => {
+  const { targetAmount, donations } = props;
   let total = donations.reduce((prev, current) => {
     return (prev += current.amount);
   }, 0);
-  console.log(total);
+
   return (
-    <div className='progress'>
+    <section className='progress'>
       <h2>
-        Raised <span className='secondary'>${total}</span> of{' '}
+        Raised <span className='secondary'>${total}</span> of {' '}
         <span className='secondary'>${targetAmount}</span>
       </h2>
-    </div>
+    </section>
   );
 };
+
+export default Progress;

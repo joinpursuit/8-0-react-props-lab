@@ -1,5 +1,5 @@
-import React from 'react';
-const RecentDonations = ({ donations }) => {
+const RecentDonations = (props) => {
+  const { donations } = props;
   const recent = donations.map((donation) => {
     const { id, name, caption, amount } = donation;
     return (

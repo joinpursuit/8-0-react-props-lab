@@ -1,9 +1,10 @@
 const DonationForm = ({ donations }) => {
   return (
     <div className='donation'>
-      <h3>
-        You could be donation <span class='secondary'>#{donations}!</span>
-      </h3>
+      <h2>
+        You could be donation{' '}
+        <span class='secondary'>#{donations.length + 1}!</span>
+      </h2>
       <form>
         <label>
           Name:

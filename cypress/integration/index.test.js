@@ -1,4 +1,4 @@
-describe("Index", () => {
+ describe("Index", () => {
   it("displays the progress total", () => {
     cy.react("Progress").should("exist");
     cy.react("Progress").contains("Raised $335 of $1000");

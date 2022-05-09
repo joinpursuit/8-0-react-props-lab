@@ -1,1 +1,17 @@
-/* Your code here! */
+.recentDonations {
+  width: 25vw;
+  background-color: #eee;
+}
+.recentDonations div {
+  padding: 0.5vw;
+  padding-left: 3vw;
+}
+
+.recentDonationsTittle {
+  padding: 1vw;
+  padding-left: 3vw;
+}
+.recentDonations li {
+  list-style: none;
+  margin-left: -2vw;
+}

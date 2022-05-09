@@ -9,7 +9,7 @@ export default function DonationForm(props) {
     <>
     <section className="donation">
       <h3>
-        You could be donation <span class="secondary"> #{donationCount}</span>
+        You could be donation <span class="secondary"> #{donationCount}!</span>
       </h3>
       <form>
         <label>

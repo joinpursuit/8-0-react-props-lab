@@ -45,24 +45,19 @@ export default class App extends React.Component {
       return (acc += ele.amount);
     }, 0);
 
-    const progress = (
-      <Progress donationAmount={donationAmount} targetAmount={targetAmount} />
-    );
-
-    const donationForm = (
-      <DonationForm nthPeopleDonate={donations.length + 1} />
-    );
-
-    const recentDonations = <RecentDonations donations={donations} />;
-
     return (
       <>
         <TopBar />
         <main className="container">
-          <section className="sidebar">{recentDonations}</section>
+          <section className="sidebar">
+            <RecentDonations donations={donations} />;
+          </section>
           <section className="">
-            {progress}
-            {donationForm}
+            <Progress
+              donationAmount={donationAmount}
+              targetAmount={targetAmount}
+            />
+            <DonationForm nthPeopleDonate={donations.length + 1} />
           </section>
         </main>
       </>

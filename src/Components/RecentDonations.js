@@ -1,13 +1,29 @@
-import react from "react";
-const RecentDonations = () => {
-  return(<section>
+
+
+// interloate the prop -donations- from the parent.js file you are going to use in the child.js file - TO GET A LISTING  OF ALL DONATIONS 
+const RecentDonations = ({donations}) => {
+  return(
+  <div>
     <h2>Recent Donations</h2>
     <ul>
-      <li><span>Jo donated $25</span>You really need this. Really.</li>
-      <li><span>Rami donated $10</span>Here, take a break from work!</li>
-      
+      {/* loop through the donations array - for each donation create - RETURN  */}
+      {donations.map((donation) => {
+        return ( 
+          // a listing - MUST HAVE A KEY - equal interpolated prop key value - donation.amount
+      <li key={donation.id}>
+        <span>
+          {/* interpolate prop key value - donation.name and donation.amount */}
+          {donation.name} donated ${donation.amount}
+          </span>
+          <br/>
+          {/* interpolate prop key value - donation.caption */}
+          {donation.caption}
+          </li>
+        )
+      })}
     </ul>
-  </section>)
+  </div>
+  )
 };
 
 export default RecentDonations;

@@ -1,10 +1,10 @@
-import react from "react";
 
-// interpolate prop value
+
+// interloate the props -donationNumber- from the parent.js file you are going to use in the child.js file - TO GET THE NUMBER OF DONATIONS 
 const DonationForm = ({donationNumber}) => {
   return (<section class="donation">
-    {/* interpolate prop key  int tag */}
-  <h3>You could be donation <span class="secondary">#{donationNumber}!</span></h3>
+      {/* display the interpolated prop  inside of h3 tag - donationNumber */}
+      <h3>You could be donation <span class="secondary">#{donationNumber}!</span></h3>
   <form>
     <label
       >Name<input

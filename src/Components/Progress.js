@@ -4,7 +4,7 @@
 const Progress = ({donations, targetAmount}) => {
 
   // create a value starting at 0
-  let raiseMoney = 0;
+  let raisedMoney = 0;
   return (
   <h2>
     Raised <span className="secondary">
@@ -12,11 +12,11 @@ const Progress = ({donations, targetAmount}) => {
         // loop through the array of donations - for each donation 
         donations.map((donation) => {
           // add each donation amount to the starting value
-          raiseMoney += donation.amount;
+          raisedMoney += donation.amount;
         })
       }
       {/* display the interpolated sum of all the donation amounts */}
-      ${raiseMoney}
+      ${raisedMoney}
       </span> of
       {/* display the interpolated prop - targetAmount */}
     <span className="secondary"> ${targetAmount}</span>

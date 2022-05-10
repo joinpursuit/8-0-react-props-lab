@@ -5,6 +5,7 @@
   --dark: #022b3a;
   --primary: #2f9c95;
   --secondary: #b27092;
+  --white: #FFFFFF;
 }
 
 body {
@@ -61,7 +62,7 @@ header p {
   padding: 10px;
   text-align: center;
 }
-
+.sidebar h2 {font-size: 2rem;text-align: center;}
 .sidebar ul {
   padding: 0;
   list-style: none;
@@ -70,6 +71,7 @@ header p {
 .sidebar ul li {
   display: block;
   padding: 10px;
+  text-align: left;
 }
 
 .sidebar ul li span {
@@ -78,30 +80,32 @@ header p {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
+.sidebar ul li span b {font-size: 1.5rem;}
 
 /* Progress */
 .progress {
   margin-bottom: 25px;
 }
-
 .secondary {
   color: var(--secondary);
 }
 
 /* Donation Form */
+.donation {}
+.donation h3 {font-size: 2rem;text-align: center;}
+.donation form {width: 50%; margin: auto;display: block;}
+.donation fieldset {padding: 0;/*display: grid;grid-template-columns: 1fr 3fr;*/ border: none;}
+.donation label {margin: 10px 0 5px 0;font-size: 1.2rem;font-weight: 500;}
 .donation input[type="text"],
 .donation input[type="number"] {
-  display: block;
-  margin: 10px 0;
-  padding: 5px;
+  width: 100%;display: block;margin: 10px 0;padding: 10px;border: 10px solid #cbf3f0;font-size: 1.4rem; border-radius: 5px;box-sizing: border-box;
 }
-
 .donation input[type="submit"],
 .donation button {
-  background: var(--primary);
-  font-weight: bold;
-  padding: 10px;
+  padding: 10px 80px;margin: 10px auto;display: table; background: var(--primary);font-size: 1.4rem;font-weight: bold;color: var(--white);border: none;
+  border-radius: 5px;
 }
+.donation button:hover {cursor: pointer;background-color: #2ec4b6;}
 
 @media (max-width: 950px) {
   .container {

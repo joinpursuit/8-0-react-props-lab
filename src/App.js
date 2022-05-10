@@ -1,7 +1,7 @@
 import React from "react";
 import TopBar from "./Components/TopBar";
-
 import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
 
 import "./App.css";
  
@@ -49,6 +49,9 @@ export default class App extends React.Component {
             <RecentDonations donations={donations}/> 
           </aside>
           <article>
+            <section className="progress">
+              <Progress donations={donations} targetAmount= {targetAmount} />
+            </section>
             
           </article>
         </main>

@@ -41,9 +41,9 @@ const donations = [
 
 export default class App extends React.Component {
   render() {
-    let sum = 0;
+    let collected = 0;
     for (let donated of donations) {
-      sum += donated.amount;
+      collected += donated.amount;
     }
     let donate = donations.map((donate) => {
       return (
@@ -51,6 +51,7 @@ export default class App extends React.Component {
           name={donate.name}
           amount={donate.amount}
           caption={donate.caption}
+          key={donate.id}
         />
       );
     });
@@ -64,7 +65,7 @@ export default class App extends React.Component {
             {donate}
           </section>
           <section className="">
-            <Progress amount={sum} targetAmount={targetAmount} />
+            <Progress amount={collected} targetAmount={targetAmount} />
             <DonationForm PeopleDonateQueue={donations.length + 1} />
           </section>
         </main>

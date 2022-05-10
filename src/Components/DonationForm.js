@@ -1,9 +1,10 @@
 const DonationForm = (props) => {
+  const { PeopleDonateQueue } = props;
   return (
     <section className="donation">
       <h3>
         You could be donation
-        <span className="secondary">#{props.PeopleDonateQueue}!</span>
+        <span className="secondary">#{PeopleDonateQueue}!</span>
       </h3>
       <form>
         <label>

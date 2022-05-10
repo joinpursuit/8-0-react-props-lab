@@ -70,6 +70,7 @@ header p {
 .sidebar ul li {
   display: block;
   padding: 10px;
+  list-style-type: none;
 }
 
 .sidebar ul li span {

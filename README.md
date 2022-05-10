@@ -48,7 +48,7 @@ Inside of the `App.js` file are two variables which will serve as props for your
 
 1. `targetAmount`: A number, in dollars, that represents the total amount of money attempting to be raised.
 
-1. `donations`: An array of objects, where each object represents a donation.
+2. `donations`: An array of objects, where each object represents a donation.
 
 Create each component in the `Components/` directory and pass props from the `App` to each components to create the mockup as seen above. HTML snippets for each component is included below.
 

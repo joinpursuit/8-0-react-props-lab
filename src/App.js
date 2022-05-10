@@ -1,5 +1,8 @@
 import React from "react";
 import TopBar from "./Components/TopBar";
+import DonationForm from "./Components/DonationForm";
+import RecentDonations from "./Components/RecentDonations"
+import Progress from "./Components/Progress"
 import "./App.css";
 
 const targetAmount = 1000;
@@ -36,16 +39,22 @@ const donations = [
   },
 ];
 
+const totalAmount = donations.reduce((a,b)=>{
+  //starts a which is zero (a)
+  //item in array will be (b)
+  return a + b.amount
+},0)
+console.log(totalAmount)
 export default class App extends React.Component {
   render() {
     return (
       <>
         <TopBar />
         <main className="container">
-          <section className="sidebar">{/* Recent Donations */}</section>
+          <section className="sidebar"><RecentDonations donations= {donations}/></section>
           <section className="">
-            {/* Progress */}
-            {/* Donation Form */}
+            <Progress totalAmount= {totalAmount} targetAmount = {targetAmount} />
+            <DonationForm donations= {donations}/>
           </section>
         </main>
       </>

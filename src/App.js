@@ -50,7 +50,7 @@ export default class App extends React.Component {
           </section>
           <section className="">
             <Progress target={targetAmount} donations={donations} />
-            <DonationForm position={donations.length + 1} />
+            <DonationForm number={donations.length + 1} />
           </section>
         </main>
       </>

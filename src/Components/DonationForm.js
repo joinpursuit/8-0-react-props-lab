@@ -2,7 +2,7 @@ const DonationForm = (props) => {
   return (
     <section class="donation">
       <h3>
-        You could be donation <span class="seconday">#{props.position}!</span>
+        You could be donation <span class="seconday">#{props.number}!</span>
       </h3>
       <form>
         <label>

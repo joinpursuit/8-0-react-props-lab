@@ -1,10 +1,10 @@
 const Progress = (props) => {
-  const { current } = props;
+  const { current, total } = props;
   return (
     <section class="progress">
       <h2>
         Raised <span class="secondary">${current}</span> of
-        <span class="secondary"> $1000</span>
+        <span class="secondary"> ${total}</span>
       </h2>
     </section>
   );

@@ -1,14 +1,19 @@
 const RecentDonations = (props) => {
-  const { amount, caption, id, name } = props;
+  const { donations } = props;
   return (
     <section>
+      <h2>Recent Donations</h2>
       <ul>
-        <li>
-          <span>
-            {name} donated ${amount}
-          </span>
-          {caption}
-        </li>
+        {donations.map((donation) => {
+          return (
+            <li>
+              <span>
+                {donation.name} donated ${donation.amount}
+              </span>
+              {donation.caption}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

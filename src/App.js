@@ -44,16 +44,6 @@ donations.forEach((donation) => {
   totalCollected += donation.amount;
 });
 
-const donationList = donations.map((donation) => {
-  return (
-    <RecentDonations
-      amount={donation.amount}
-      name={donation.name}
-      caption={donation.caption}
-    />
-  );
-});
-
 export default class App extends React.Component {
   render() {
     return (
@@ -61,12 +51,11 @@ export default class App extends React.Component {
         <TopBar />
         <main className="container">
           <section className="sidebar">
-            <h2>Recent Donations</h2>
-            {donationList}
+            <RecentDonations donations={donations} />
           </section>
           <section className="">
-            <Progress current={totalCollected} />
-            <DonationForm newNumber={donations[donations.length - 1].id + 1} />
+            <Progress current={totalCollected} total={targetAmount} />
+            <DonationForm newNumber={donations.length + 1} />
           </section>
         </main>
       </>

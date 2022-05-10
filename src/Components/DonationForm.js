@@ -1,7 +1,3 @@
-// const DonationForm = () => {
-//   return null;
-// };
-
 import react from "react";
 
 class DonationForm extends react.Component {

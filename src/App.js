@@ -41,22 +41,12 @@ const donations = [
 
 export default class App extends React.Component {
   render() {
-    const donationList = donations.map((donate) => {
-      return (
-        <RecentDonations
-          name={donate.name}
-          amount={donate.amount}
-          caption={donate.caption}
-        />
-      );
-    });
     return (
       <>
         <TopBar />
         <main className="container">
           <section className="sidebar">
-            <h2>Recent Donations</h2>
-            {donationList}
+            <RecentDonations donations={donations} />
           </section>
           <section className="progress-donate">
             <Progress targetAmount={targetAmount} donations={donations} />

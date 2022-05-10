@@ -39,16 +39,36 @@ const donations = [
   },
 ];
 
+const donationTotal = () => {
+  let total = 0;
+  for (let donation of donations) {
+    total += donation.amount;
+  }
+  return total;
+};
+
 export default class App extends React.Component {
   render() {
+    const donationList = donations.map((donated) => {
+      return (
+        <RecentDonations
+          name={donated.name}
+          amount={donated.amount}
+          caption={donated.caption}
+        />
+      );
+    });
     return (
       <>
         <TopBar />
         <main className="container">
-          <section className="sidebar">{/* Recent Donations */}</section>
+          <section className="sidebar">
+            <h2>Recent Donations</h2>
+            {donationList}
+          </section>
           <section className="">
-            {/* Progress */}
-            {/* Donation Form */}
+            <Progress amount={donationTotal()} targetAmount={targetAmount} />
+            <DonationForm id={donations[donations.length - 1].id + 1} />
           </section>
         </main>
       </>

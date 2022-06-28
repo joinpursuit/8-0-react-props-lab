@@ -42,8 +42,8 @@ const donations = [
 export default class App extends React.Component {
   render() {
     let totalAmount = 0;
-    for (let donation of donations){
-      totalAmount += donation.amount
+    for (let donation of donations) {
+      totalAmount += donation.amount;
     }
 
     return (
@@ -69,15 +69,10 @@ export default class App extends React.Component {
           <section class="donation">
             <section class="progress">
               <h2>
-                <Progress 
-                  total = {totalAmount}
-                  target = {targetAmount}                
-                />                
+                <Progress total={totalAmount} target={targetAmount}></Progress>
               </h2>
             </section>
-            <DonationForm
-              donationCount = {donations.length+1}
-            />
+            <DonationForm donationCount={donations.length + 1} />
           </section>
         </main>
       </>

@@ -21,11 +21,12 @@ const DonationForm = (props) => {
     e.preventDefault();
     if (!name || !caption || !amount) {
       alert(`Please complete the Donation form!`);
-    }else{
-
+    } else {
+      props.setAllDonations([
+        { id, name, caption, amount },
+        ...props.donations,
+      ]);
     }
-    props.setAllDonations([{ id, name, caption, amount },...props.donations]);
-
   };
   return (
     <section className='donation'>

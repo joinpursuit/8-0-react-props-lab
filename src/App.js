@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TopBar from "./Components/TopBar";
 import "./App.css";
-
+import RecentDonations from "./Components/RecentDonations";
+import Progress from "./Components/Progress";
+import DonationForm from "./Components/DonationForm";
 const targetAmount = 1000;
 const donations = [
   {
@@ -35,20 +37,38 @@ const donations = [
     name: "Sam",
   },
 ];
+const App = () => {
+  const [allDonations, setAllDonations] = useState(donations);
+  const [amountRaised, setAmountRaised] = useState(0);
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <>
-        <TopBar />
-        <main className="container">
-          <section className="sidebar">{/* Recent Donations */}</section>
-          <section className="">
-            {/* Progress */}
-            {/* Donation Form */}
-          </section>
-        </main>
-      </>
-    );
-  }
-}
+  useEffect(() => {
+    const getTotal = () => {
+      const total = allDonations
+        .map(({ amount }) => amount)
+        .reduce(function (a, b) {
+          return a + b;
+        }, 0);
+      setAmountRaised(total);
+    };
+    getTotal();
+  }, [allDonations]);
+
+  return (
+    <>
+      <TopBar />
+      <main className='container'>
+        <section className='sidebar'>
+          <RecentDonations donations={allDonations} />
+        </section>
+        <section className=''>
+          <Progress targetAmount={targetAmount} raised={amountRaised} />
+          <DonationForm
+            donations={allDonations}
+            setAllDonations={setAllDonations}
+          />
+        </section>
+      </main>
+    </>
+  );
+};
+export default App;

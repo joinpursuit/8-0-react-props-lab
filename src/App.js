@@ -47,11 +47,13 @@ export default class App extends React.Component {
         <main className='container'>
           <section className='sidebar'>
             {/* Recent Donations */}
-            <RecentDonations />{' '}
+            <RecentDonations donations={donations} />{' '}
           </section>
           <section className=''>
-            {/* Progress */} <Progress />
-            {/* Donation Form */} <DonationForm />
+            {/* Progress */}{' '}
+            <Progress targetAmount={targetAmount} donations={donations} />
+            {/* Donation Form */}{' '}
+            <DonationForm donations={donations.length + 1} />
           </section>
         </main>
       </>

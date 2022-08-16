@@ -1,7 +1,8 @@
 describe("Index", () => {
   it("displays the progress total", () => {
     cy.react("Progress").should("exist");
-    cy.react("Progress").contains("Raised $335 of $1000");
+    cy.react("Progress").contains("Raised $335");
+    cy.react("Progress").contains("of $1000");
   });
 
   it("includes form elements", () => {

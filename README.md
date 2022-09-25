@@ -50,7 +50,7 @@ Inside of the `App.js` file are two variables which will serve as props for your
 
 1. `donations`: An array of objects, where each object represents a donation.
 
-Create each component in the `Components/` directory and pass props from the `App` to each components to create the mockup as seen above. HTML snippets for each component is included below.
+Create each component in the `Components/` directory and pass props from the `App` to each of the components to create the mockup as seen above. HTML snippets for each component is included below.
 
 ### Components
 
@@ -58,7 +58,7 @@ Each of the components below must be completed and must make use of props. A "ha
 
 #### DonationForm
 
-For the donation form, you will need to update the sentence "You could be donation #1!" so that instead of being hardcoded to the number `1`, it is set to a number one above the number of donations.
+For the donation form, you will need to update the sentence "You could be donation #1!" so that instead of being hardcoded to the number `1`, it is set to a number one above the actual number of donations.
 
 ```html
 <section className="donation">

@@ -3,13 +3,13 @@ const RecentDonations = ({ donations }) => {
     <section>
       <h2>Recent Donations</h2>
       <ul>
-        {donations.map((donation) => {
+        {donations.map(({ id, amount, caption, name }) => {
           return (
-            <li key={donation.id}>
+            <li key={id}>
               <span>
-                {donation.name} donated ${donation.amount}
+                {name} donated ${amount}
               </span>
-              {donation.caption}
+              {caption}
             </li>
           );
         })}

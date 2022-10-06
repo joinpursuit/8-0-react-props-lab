@@ -2,7 +2,7 @@ const DonationForm = ({prop}) => {
   // return null;
   const length = prop.length
   return(
-    <>
+    <section className="donation">
       <h3>You could be donation <span className="secondary">#{length + 1}!</span></h3>
       <form>
         <label htmlFor="name">
@@ -31,7 +31,7 @@ const DonationForm = ({prop}) => {
         </label>
         <button>Donate!</button>
       </form>
-    </>
+    </section>
   )
 };
 

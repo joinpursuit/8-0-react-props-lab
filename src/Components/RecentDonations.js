@@ -1,6 +1,5 @@
 const RecentDonations = ({prop}) => {
   // return null;
-  // {name, amount, caption}
 
   return(
     <section>

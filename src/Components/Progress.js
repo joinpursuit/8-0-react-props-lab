@@ -7,8 +7,6 @@ const Progress = ({ donations }) => {
     })
     .reduce((acc, el) => acc + el, 0);
 
-  console.log(donationsSum);
-
   return (
     <section className="progress">
       <h2>

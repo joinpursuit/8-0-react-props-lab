@@ -2,7 +2,7 @@ const DonationForm = ({donationArray}) => {
   return (
     <section className="donation">
       <h3>
-        You could be donation <span class="secondary">#{donationArray.length + 1}!</span>
+        You could be donation <span className="secondary">#{donationArray.length + 1}!</span>
       </h3>
       <form>
         <label htmlFor="name">

@@ -3,6 +3,7 @@ const Progress = ({prop,total}) => {
   const raised = prop.reduce((acc, {amount}) => {
        return acc + amount
   },0)
+  
   return(
     <section className="progress">
       <h2>

@@ -5,7 +5,9 @@ const Progress = ({prop,total}) => {
   },0)
   return(
     <>
-      <h2>Raised <span className="secondary">${raised}</span> of <span className="secondary">${total}</span></h2>
+      <h2>
+        Raised <span className="secondary">${raised}</span> of <span className="secondary">${total}</span>
+      </h2>
     </>
   )
 };

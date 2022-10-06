@@ -12,7 +12,7 @@ const total = getTotal(donations)
     <section className="progress">
   <h2>
     Raised <span className="secondary">${total}</span> of
-    <span className="secondary">{targetAmount}</span>
+    <span className="secondary">${targetAmount}</span>
   </h2>
 </section>
   )

@@ -36,19 +36,19 @@ const donations = [
   },
 ];
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <>
-        <TopBar />
-        <main className="container">
-          <section className="sidebar">{/* Recent Donations */}</section>
-          <section className="">
-            {/* Progress */}
-            {/* Donation Form */}
-          </section>
-        </main>
-      </>
-    );
-  }
+function App() {
+  return (
+    <>
+      <TopBar />
+      <main className="container">
+        <section className="sidebar">{/* Recent Donations */}</section>
+        <section className="">
+          {/* Progress */}
+          {/* Donation Form */}
+        </section>
+      </main>
+    </>
+  );
 }
+
+export default App;

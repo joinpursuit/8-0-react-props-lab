@@ -1,5 +1,3 @@
-const Progress = () => {
+export default function Progress() {
   return null;
-};
-
-export default Progress;
+}

@@ -1,5 +1,3 @@
-const DonationForm = () => {
+export default function DonationForm() {
   return null;
-};
-
-export default DonationForm;
+}

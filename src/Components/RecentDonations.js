@@ -1,5 +1,3 @@
-const RecentDonations = () => {
+export default function RecentDonations() {
   return null;
-};
-
-export default RecentDonations;
+}

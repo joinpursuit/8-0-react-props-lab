@@ -3,7 +3,7 @@ const DonationForm = ({ DonationPlace }) => {
     <section className="donation">
       <h3>
         You could be donation{" "}
-        <span class="secondary">#{DonationPlace.length + 1}! </span>
+        <span className="secondary">#{DonationPlace.length + 1}! </span>
       </h3>
       <form>
         <label htmlFor="name">

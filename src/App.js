@@ -1,8 +1,11 @@
-import React from "react";
-import TopBar from "./Components/TopBar";
-import "./App.css";
+import React from "react"
+import TopBar from "./Components/TopBar"
+import DonationForm from "./Components/DonationForm"
+import Donations from "./Components/Donations"
+import Progress from "./Components/Progress"
+import "./App.css"
 
-const targetAmount = 1000;
+const targetAmount = 1000
 const donations = [
   {
     amount: 250,
@@ -34,7 +37,7 @@ const donations = [
     id: 5,
     name: "Sam",
   },
-];
+]
 
 export default class App extends React.Component {
   render() {
@@ -49,6 +52,6 @@ export default class App extends React.Component {
           </section>
         </main>
       </>
-    );
+    )
   }
 }

@@ -1,5 +1,7 @@
 const DonationForm = ({donations}) => {
+  
   return(
+    <>
     <section className="donation">
       <h3>
         You could be donation{" "}
@@ -17,7 +19,7 @@ const DonationForm = ({donations}) => {
             name="caption"
             type="text"
             placeholder="Add a brief message..."
-          />
+          />  
         </label>
         <label htmlFor="amount">
           Amount
@@ -26,6 +28,7 @@ const DonationForm = ({donations}) => {
         <button>Donate!</button>
       </form>
     </section>
+    </>
   );
 };
 

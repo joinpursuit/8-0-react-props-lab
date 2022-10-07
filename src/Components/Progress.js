@@ -1,17 +1,21 @@
-import addDonations from "../helpers/helper";
+// import addDonations from "../helpers/helper";
 
 const Progress = ({ donations, targAmount }) => {
-  let totalDonations = addDonations({ donations });
-  return;
-
-  donations.map((donation) => {
-    return (
-      <h1>
-        {" "}
-        {totalDonations} of ${targAmount}{" "}
-      </h1>
-    );
-  });
+  return (
+    <section className="progress">
+      <h2>
+        Raised{" "}
+        <span className="secondary">
+          $
+          {donations.reduce((acc, donation) => {
+            return (acc += donation.amount);
+          }, 0)}
+        </span>{" "}
+        of
+        <span className="secondary"> ${targAmount}</span>
+      </h2>
+    </section>
+  );
 };
 
 export default Progress;

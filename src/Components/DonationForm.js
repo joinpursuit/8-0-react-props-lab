@@ -1,15 +1,9 @@
 const DonationForm = ({ donations }) => {
-  let donationsLength = 0;
-
-  donations.map((donation) => {
-    return (donationsLength = donation.length);
-    console.log(donation.length);
-  });
-
   return (
     <section className="donation">
       <h3>
-        You could be donation <span class="secondary">#{donationsLength}!</span>
+        You could be donation{" "}
+        <span class="secondary">#{donations.length + 1}!</span>
       </h3>
       <form>
         <label htmlFor="name">

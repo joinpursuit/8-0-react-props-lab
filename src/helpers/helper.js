@@ -1,8 +1,8 @@
-const addDonations = ({ donations }) => {
-  const donationTotal = donations.reduce((acc, donation) => {
-    return acc + donation.amount;
-  }, 0);
-  return donationTotal;
-};
+// const addDonations = ({ donations }) => {
+//   const donationTotal = donations.reduce((acc, {amount}) => {
+//     return acc + { amount{ };
+//   }, 0);
+//   return donationTotal;
+// };
 
-export default addDonations;
+// export default addDonations;

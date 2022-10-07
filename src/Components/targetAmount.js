@@ -1,5 +1,5 @@
-function targetAmount(props) {
+function TargetAmount() {
   return <div></div>
 }
 
-export default targetAmount
+export default TargetAmount

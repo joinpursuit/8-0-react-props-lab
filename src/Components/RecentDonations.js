@@ -1,4 +1,4 @@
-const RecentDonations = () => {
+const RecentDonations = ({ donations }) => {
   return (
     <div>
       <section>

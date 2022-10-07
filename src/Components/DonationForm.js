@@ -1,4 +1,4 @@
-const DonationForm = () => {
+const DonationForm = ({ donations }) => {
   return (
     <div>
       <section className="donation">

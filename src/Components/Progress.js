@@ -1,14 +1,14 @@
 
 
-
-// amount="$19"
-// caption ="my big donation" 
-// id= "45" 
-// name="Mary Lane"
-
-
-const Progress = () => {
-  return null;
+const Progress = ({targetAmount, totalDonated}) => {
+  return (
+    <section className="progress">
+  <h2>
+    Raised  <span className="secondary">${totalDonated}</span> of
+    <span className="secondary"> ${targetAmount}</span>
+  </h2>
+</section>
+  );
 };
 
 export default Progress;

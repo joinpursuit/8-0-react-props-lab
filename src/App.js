@@ -7,6 +7,7 @@ import Progress from "./Components/Progress";
 // import DonationForm from "./Components/DonationForm";
 
 const targetAmount = 1000;
+
 const donations = [
   {
     amount: 250,
@@ -40,28 +41,46 @@ const donations = [
   },
 ];
 
-export default class App extends React.Component {
+const totalDonated = donations.reduce((accumulator, oneDonation) =>{
+ return (accumulator += oneDonation.amount)
+},0)
+console.log("totalDonated", totalDonated)
+
+
+
+// let donationRaised = 0
+const donationList = donations.map(donation => {
+
+  // {
+  //   donationRaised =  donationRaised + donation.amount
+  // }
+  return(
+    <RecentDonations name = {donation.name} amount = {donation.amount} caption = {donation.caption} id = {donation.id} />
+  )
+})
+
+
+function App() {
   
-  render() {
     return (
       <>
         <TopBar />
         <main className="container">
           <section className="sidebar">
-            {/* Recent Donations */}
-           
-            <RecentDonations donations ={donations} /> 
-
+          
+            <h2>Recent Donations</h2>
+       
+             {donationList}
       
           </section>
 
           <section className="">
-            <Progress />
-            <DonationForm />
+            <Progress targetAmount={targetAmount}  totalDonated = {totalDonated} />
+            <DonationForm  totalDonors = {donations.length +1}/>
           </section>
         </main>
       </>
     );
   }
-}
 
+export default App

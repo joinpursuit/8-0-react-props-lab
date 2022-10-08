@@ -31,4 +31,10 @@ export default RecentDonations;
 
   {/* <li><span>Rami donated $10</span>Here, take a break from work!</li> */}
 
+     {/* {donations.map((name, amount, caption, id) => {
+                return (
+                  <li key = {id}><span>{name} donated ${amount}</span>{caption}</li>
+                )
+              })} */}
+
   

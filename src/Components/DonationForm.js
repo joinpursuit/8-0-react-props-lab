@@ -2,11 +2,11 @@
 // import Donations from "./Donations";
 
 
-const DonationForm = () => {
+const DonationForm = ({totalDonors}) => {
   return (
     <>
       <section className="donation">
-          <h3>You could be donation <span class="secondary">#1!</span></h3>
+          <h3>You could be donation <span class="secondary">#{totalDonors}!</span></h3>
           <form>
                 <label htmlFor="name">Name<input id="name" name="name"type="text" placeholder="Your name..." /> 
                 </label>
@@ -24,5 +24,6 @@ const DonationForm = () => {
 };
 
 
-
+{/* <button onClick={changeMode}> Change to {mode === 'light' ? 'dark': 'light'} mode </button>
+          <h1>{mode}</h1> */}
 export default DonationForm;

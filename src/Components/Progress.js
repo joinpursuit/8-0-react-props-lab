@@ -1,9 +1,9 @@
-const Progress = ({ donations, targetAmount }) => {
+const Progress = ({ amountDonation, targetAmount }) => {
   return (
     <section className="progress">
       <h2>
-        Raised <span className="secondary">$0</span> of
-        <span className="secondary">${targetAmount}</span>
+        Raised <span className="secondary">${amountDonation}</span> of
+        <span className="secondary"> ${targetAmount}</span>
       </h2>
     </section>
   )

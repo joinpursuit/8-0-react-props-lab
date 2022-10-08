@@ -1,9 +1,10 @@
-const DonationForm = ({ donations }) => {
+const DonationForm = ({ donationsCount }) => {
   return (
     <div>
       <section className="donation">
         <h3>
-          You could be donation <span class="secondary">#1!</span>
+          You could be donation
+          <span class="secondary"> #{donationsCount}!</span>
         </h3>
         <form>
           <label htmlFor="name">

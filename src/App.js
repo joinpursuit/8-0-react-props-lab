@@ -4,8 +4,6 @@ import DonationForm from "./Components/DonationForm"
 import Progress from "./Components/Progress"
 import RecentDonations from "./Components/RecentDonations"
 
-import "./App.css"
-
 const targetAmount = 1000
 const donations = [
   {
@@ -39,26 +37,28 @@ const donations = [
     name: "Sam",
   },
 ]
+const raisedDonations = donations.reduce((acc, curr) => {
+  return (acc += curr.amount)
+}, 0)
 
-export default class App extends React.Component {
-  render() {
-    // const { name, caption, amount } = this.props;
-    return (
-      <>
-        <TopBar />
-        <main className="container">
-          <section className="sidebar">
-            {/* Recent Donations */}
-            <RecentDonations donations={donations} />
-          </section>
-          <section className="">
-            {/* Progress */}
-            <Progress donations={donations} />
-            {/* Donation Form */}
-            <DonationForm donations={donations} />
-          </section>
-        </main>
-      </>
-    )
-  }
+function App() {
+  return (
+    <>
+      <TopBar />
+      <main className="container">
+        <section className="sidebar">
+          <RecentDonations donations={donations} />
+        </section>
+        <section className="">
+          <Progress
+            amountDonation={raisedDonations}
+            targetAmount={targetAmount}
+          />
+          <DonationForm donationsCount={donations.length + 1} />
+        </section>
+      </main>
+    </>
+  )
 }
+
+export default App

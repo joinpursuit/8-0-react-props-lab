@@ -1,3 +1,7 @@
-export default function RecentDonations() {
-  return null;
+export default function RecentDonations({alldonations}) {
+  return (
+    <div>
+      {alldonations}
+    </div>
+  );
 }

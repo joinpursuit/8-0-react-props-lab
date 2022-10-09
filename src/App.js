@@ -50,7 +50,7 @@ function App() {
             total={donation_total}
             target={targetAmount} 
           />
-          <DonationForm />
+          <DonationForm count={donations.length}/>
           <ListDonations donations={donations} />
         </section>
       </main>

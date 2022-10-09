@@ -1,37 +1,9 @@
-import donations from './donations.json'
-import Child from './Child'
-const RecentDonations = () => {
-  // console.log(donations)
-  // const listItems = donations.map(donation => {
-  //   return (
-  //     <DonationItem 
-  //     donationAmount={donation.amount}
-  //     donationCaption={donation.caption}
-  //     donationId={donation.id}
-  //     donationName={donation.name}
-  //     />
-    // )
-  // )
-  return (
-    <ul>
-    {/* <div>
-        <h2>Recent Donations</h2>
-        {
-          people.map(p)
-        }
-    </div> */}
-    <h2>Recent Donations</h2>
-    {
-      donations.map((donation, i) => {
-        return (
-          <Child amount={donation.amount} caption={donation.caption} id={donation.id} name={donation.name}/>
-        )
-      })
-    }
-    </ul>
-  )
+const RecentDonations = (donation) => {
+  return(
+    <li>
+      <span>{donation.donationName} has donated ${donation.donationAmount}</span>{donation.donationCaption}<span></span>
+    </li>
+)
+
 }
-// }
-
-
-export default RecentDonations
+export default RecentDonations;

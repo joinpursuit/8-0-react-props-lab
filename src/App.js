@@ -2,6 +2,7 @@ import React from "react";
 import TopBar from "./Components/TopBar";
 import RecentDonations from "./Components/RecentDonations";
 import DonationForm from "./Components/DonationForm"
+import Progress from "./Components/Progress"
 import "./App.css";
 
 const targetAmount = 1000;
@@ -36,7 +37,32 @@ const donations = [
     id: 5,
     name: "Sam",
   },
+  
 ];
+
+const listItems = donations.map((donation) => {
+  return (
+    <RecentDonations key={donation.id} donationName={donation.name} donationAmount={donation.amount} donationCaption={donation.caption}/>
+  )
+})
+
+let lastDonationId = donations[donations.length-1].id
+let nextDonatorNumber = lastDonationId + 1
+let totalDonationsArr = []
+let totalDonations = 0
+
+// getting our total donations
+for (let index = 0; index < donations.length; index++) {
+  totalDonationsArr.push(donations[index].amount)
+}
+console.log(totalDonationsArr)
+
+
+for (var i in totalDonationsArr) {
+  totalDonations += totalDonationsArr[i];
+}
+console.log(totalDonations)
+
 
 function App() {
   return (
@@ -44,11 +70,40 @@ function App() {
       <TopBar />
       <main className="container">
         <section className="sidebar">
-          <RecentDonations donations={donations}/>
+          <h2>Recent Donations</h2>
+          <ul>
+          {listItems}
+          </ul>
           </section>
-        <section className="">
-          {/* Progress */}
-          <DonationForm/>
+        <section>
+          
+          <section className='progress'>
+          <Progress donorNum={totalDonations} target={targetAmount}/>
+          </section>
+          <section className='donation'>
+          <DonationForm donorNum={nextDonatorNumber}/>
+          <form>
+          <label htmlFor="name"
+          >Name<input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Your name..." /></label
+          ><label htmlFor="caption"
+          >Caption<input
+          id="caption"
+          name="caption"
+          type="text"
+          placeholder="Add a brief message..." /></label
+         ><label htmlFor="amount"
+         >Amount<input
+         id="amount"
+         name="amount"
+         type="number"
+         placeholder="0" /></label
+         ><button>Donate!</button>
+         </form>
+          </section>
         </section>
       </main>
     </>

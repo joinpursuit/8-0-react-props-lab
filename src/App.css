@@ -1,1 +1,8 @@
 /* Your code here! */
+
+form label {
+    display: grid;
+    grid-template-rows: 1fr;
+    padding-bottom: 1rem;
+    width: 44%;
+}

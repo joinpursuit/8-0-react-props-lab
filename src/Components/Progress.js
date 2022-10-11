@@ -1,5 +1,5 @@
-export default function Progress(props) {
-  const { donoTotal, targetAmount } = props;
+export default function Progress({ donoTotal, targetAmount }) {
+ 
 
   return (
     <section className="progress">

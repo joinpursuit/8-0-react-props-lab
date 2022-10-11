@@ -1,5 +1,5 @@
-export default function DonationForm(props) {
-  const { numOfDonation } = props;
+export default function DonationForm({ numOfDonation }) {
+
 
   return (
     <section className="donation">

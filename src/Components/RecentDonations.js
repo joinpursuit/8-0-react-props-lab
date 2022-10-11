@@ -1,5 +1,5 @@
-export default function RecentDonations(props) {
-  const { donations } = props;
+export default function RecentDonations({ donations }) {
+
   return (
     <section>
       <h2>Recent Donations</h2>

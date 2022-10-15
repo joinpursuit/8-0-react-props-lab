@@ -4,7 +4,6 @@ import "./App.css";
 import DonationForm from "./Components/DonationForm";
 import Progress from "./Components/Progress";
 import RecentDonations from "./Components/RecentDonations";
-import ListItem from "./Components/ListItem";
 
 const targetAmount = 1000;
 const donations = [
@@ -40,22 +39,19 @@ const donations = [
   },
 ];
 
-
-export default class App extends React.Component {
-  render() {
-    return (
-      <>
-        <TopBar />
-        <main className="container">
-          <section className="sidebar">
-            <RecentDonations name={donations.name} amount={donations.amount} caption={donations.caption}/>
-          </section>
-          <section className="">
-            <Progress />
-            <DonationForm donations={donations} />
-          </section>
-        </main>
-      </>
-    );
-  }
+function App() {
+  return (
+    <>
+      <TopBar />
+      <main className="container">
+        <section className="sidebar"><RecentDonations donations={donations}/></section>
+        <section className="">
+          <Progress targetAmount={targetAmount} donations={donations} />
+          <DonationForm donations={donations} />
+        </section>
+      </main>
+    </>
+  );
 }
+
+export default App;

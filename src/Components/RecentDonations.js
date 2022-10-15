@@ -1,24 +1,15 @@
-import ListItem from "./ListItem";
-
-const listItem = donations.map((donation) => {
-  return (
-    <ListItem firstName={donations.name} amount={donations.amount} caption={donations.caption} />
-  )
-})
-
-const RecentDonations = (props) => {
-  const {name} = props.name
-  const {amount} = props.amount
-  const {caption} = props.caption
-
+export default function RecentDonations({donations}) {
+    
   return (
     <section>
       <h2>Recent Donations</h2>
       <ul>
-        <ListItem />
+      {donations.map((donation) => {
+    return (
+      <li><span>{donation.name} donated ${donation.amount}.</span>  {donation.caption}</li>
+    )
+  })}
       </ul>
     </section>
   )
-};
-
-export default RecentDonations;
+}

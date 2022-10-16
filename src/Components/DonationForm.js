@@ -1,4 +1,4 @@
-export default function DonationForm({donations}) {
+export default function DonationForm ({donations}) {
 
   return (
     <section className="donation">

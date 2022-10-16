@@ -40,6 +40,7 @@ const donations = [
 ];
 
 function App() {
+
   return (
     <>
       <TopBar />

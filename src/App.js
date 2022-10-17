@@ -39,7 +39,8 @@ const donations = [
   },
 ];
 
-const sumall = donations.map(item => item.amount).reduce((prev, curr) => prev + curr, 0);
+const sumall = donations.map(item => item.amount).reduce((value, total) => value + total, 0);
+
 function App() {
   return (
     <>

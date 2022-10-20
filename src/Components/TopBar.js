@@ -1,4 +1,7 @@
-export default function TopBar() {
+export default function TopBar({donations, targetAmount}) {
+  console.log(donations);
+  console.log(targetAmount);
+  
   return (
     <header>
       <h1>

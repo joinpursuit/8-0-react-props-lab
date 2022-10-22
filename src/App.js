@@ -41,10 +41,15 @@ function App() {
     <>
       <TopBar />
       <main className="container">
-        <section className="sidebar">{/* Recent Donations */}</section>
+        <section className="sidebar">
+          <RecentDonations donations={donations} />
+        </section>
         <section className="">
-          {/* Progress */}
-          {/* Donation Form */}
+          <Progress
+            raised={donations.reduce((accu, curr) => accu + curr.amount, 0)}
+            needed={targetAmount}
+          />
+          <DonationForm donationNumber={donations.length + 1} />
         </section>
       </main>
     </>

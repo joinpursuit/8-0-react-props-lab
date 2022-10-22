@@ -45,15 +45,14 @@ function App() {
     <>
       <TopBar />
       <main className="container">
-        <section className="sidebar">
-          <RecentDonations donations={donations} />
-        </section>
-        <section className="progress">
-          <Progress donations={donations} targetAmount={targetAmount} />
-          <DonationForm donations={donations} />
+        <section className="sidebar"><RecentDonations donations={donations}/></section>
+        <section className="">
+          {<Progress donations={donations} targetAmount= {targetAmount}/>}
+          {<DonationForm donations={donations}/>}
         </section>
       </main>
     </>
   );
 }
+
 export default App;

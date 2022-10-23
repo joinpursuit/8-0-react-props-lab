@@ -1,4 +1,4 @@
-export default function DonationForm() {
+export default function DonationForm(props) {
   return (
     <section className="donation">
       <h3>

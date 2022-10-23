@@ -6,7 +6,7 @@ export default function RecentDonations(props) {
         {props.donations.map((donate) => (
           <li key={donate.id}>
             <span>
-              {donate.name} donated ${donate.name}
+              {donate.name} donated ${donate.amount}
             </span>
             {donate.caption}
           </li>
